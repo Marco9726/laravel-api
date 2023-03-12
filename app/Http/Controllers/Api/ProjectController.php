@@ -11,7 +11,8 @@ class ProjectController extends Controller
 {
 	public function index()
 	{
-		$projects = Project::paginate(9);
+		// per utilizzare le foreign key associate, passo come parametri del metodo with() i nomi dei metodi delle relazioni presenti nel model Project
+		$projects = Project::with('type', 'technologies')->paginate(9);
 		return response()->json([
 			'success' => true,
 			'results' => $projects
