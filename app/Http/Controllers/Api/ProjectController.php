@@ -29,7 +29,7 @@ class ProjectController extends Controller
 				'result'  => $project
 			]);
 		} else {
-			return response()->json()([
+			return response()->json([
 				'success' => false,
 				'error' => 'Nessun progetto trovato'
 			]);
