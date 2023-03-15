@@ -11,7 +11,6 @@
 			<a href="{{ route('admin.projects.index')}}" class="btn btn-small btn-warning">Ritorna ai progetti</a>
 		</div>
 		<div class="col-12">
-			{{-- INSERIRE IF COVER_IMAGE INIZIA CON HTTP --}}
 			<img src="{{ asset('storage/' . $project->cover_image )}}" alt="{{ $project->title }}" class="w-50 mb-2">
 			<p><strong>Slug: </strong>{{ $project->slug }}</p>
 			<p><strong>Linguaggio: </strong>{{ $project->type ? $project->type->name : 'Non specificato' }}</p>
